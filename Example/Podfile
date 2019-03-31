@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DNKitUI_Example' do
+  pod 'DNKitUI', :path => '../'
+
+  target 'DNKitUI_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
