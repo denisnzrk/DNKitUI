@@ -1,0 +1,27 @@
+PODS:
+  - DNKitUI (0.1.0):
+    - DNKitUtils
+  - DNKitUtils (0.1.0)
+
+DEPENDENCIES:
+  - DNKitUI (from `../`)
+  - DNKitUtils (from `https://github.com/denisnzrk/DNKitUtils.git`)
+
+EXTERNAL SOURCES:
+  DNKitUI:
+    :path: "../"
+  DNKitUtils:
+    :git: https://github.com/denisnzrk/DNKitUtils.git
+
+CHECKOUT OPTIONS:
+  DNKitUtils:
+    :commit: f637fe81cf61901d1e8f9037b5cdbf2903afcba7
+    :git: https://github.com/denisnzrk/DNKitUtils.git
+
+SPEC CHECKSUMS:
+  DNKitUI: b2903dafeec6d7ad19d1891f35efcd30a905ea86
+  DNKitUtils: 772339c1418cf7e757dcd13f171eb43ca42678de
+
+PODFILE CHECKSUM: aec8a9a44fa137fac3d749810ca2bf7424ec76e8
+
+COCOAPODS: 1.5.3

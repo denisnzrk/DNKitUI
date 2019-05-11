@@ -1,11 +1,23 @@
 use_frameworks!
 
+def pod_DNKitUtils
+    pod 'DNKitUtils', :git => 'https://github.com/denisnzrk/DNKitUtils.git'
+    #pod 'DNKitUtils', :path => '~/Developer/DNKitUtils/'
+end
+
 target 'DNKitUI_Example' do
   pod 'DNKitUI', :path => '../'
-
+  pod_DNKitUtils
+  
   target 'DNKitUI_Tests' do
     inherit! :search_paths
-
-    
   end
+end
+
+post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+        config.build_settings['GCC_OPTIMIZATION_LEVEL'] = '0'
+        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Onone'
+        config.build_settings['SWIFT_COMPILATION_MODE'] = 'wholemodule'
+    end
 end
